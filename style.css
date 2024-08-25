@@ -4,6 +4,10 @@
     margin-top: 20px;
 }
 
+button{
+    cursor: pointer;
+}
+
 .notification-container img{
     width: 40px;
     height: auto;
