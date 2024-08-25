@@ -33,8 +33,20 @@ const saveProductToLocale = (product, quantity) =>{
     const cart = getStoredShopping();
     cart[product] = quantity;
     const cartStringified = JSON.stringify(cart)
-    console.log(cartStringified)
-    
+    localStorage.setItem('cart', cartStringified)
 
 }
+
+const productFromLocalStorage = () =>{
+    const savedCart = getStoredShopping();
+
+    for(const product in savedCart){
+        const quantity = savedCart[product];
+        console.log(product, quantity);
+        displayShow(product, quantity)
+    }
+
+}
+
+productFromLocalStorage()
 
